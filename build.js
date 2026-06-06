@@ -30,6 +30,18 @@ if (fs.existsSync(jsDir)) {
   });
 }
 
+// Copy root assets
+const assetsDir = './assets';
+if (fs.existsSync(assetsDir)) {
+  const distAssets = './dist/assets';
+  if (!fs.existsSync(distAssets)) {
+    fs.mkdirSync(distAssets, { recursive: true });
+  }
+  fs.readdirSync(assetsDir).forEach(file => {
+    fs.copyFileSync(path.join(assetsDir, file), path.join(distAssets, file));
+  });
+}
+
 // Pages to build
 const pages = [
   { template: 'index.ejs', output: 'index.html' },

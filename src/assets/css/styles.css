@@ -73,6 +73,12 @@ body {
   text-decoration: none;
 }
 
+.logo-img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
 .logo-icon {
   font-size: 28px;
   color: var(--color-primary);

@@ -243,11 +243,11 @@ if (canvas && heroSection && window.innerWidth >= 1024) {
     constructor(x, y) {
       this.x = x + (Math.random() - 0.5) * 100;
       this.y = y + (Math.random() - 0.5) * 100;
-      this.vx = (Math.random() - 0.5) * 2;
-      this.vy = (Math.random() - 0.5) * 2;
-      this.radius = Math.random() * 2 + 1;
+      this.vx = (Math.random() - 0.5) * 2.5;
+      this.vy = (Math.random() - 0.5) * 2.5;
+      this.radius = Math.random() * 4 + 3;
       this.life = 1;
-      this.maxLife = Math.random() * 100 + 200;
+      this.maxLife = Math.random() * 100 + 220;
       this.age = 0;
     }
 
@@ -290,8 +290,8 @@ if (canvas && heroSection && window.innerWidth >= 1024) {
       }
 
       // Draw connection lines
-      ctx.strokeStyle = `rgba(30, 122, 143, 0.15)`;
-      ctx.lineWidth = 1;
+      ctx.strokeStyle = `rgba(30, 122, 143, 0.4)`;
+      ctx.lineWidth = 2.5;
 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
@@ -299,8 +299,8 @@ if (canvas && heroSection && window.innerWidth >= 1024) {
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
-            ctx.globalAlpha = (1 - distance / 100) * 0.2;
+          if (distance < 140) {
+            ctx.globalAlpha = (1 - distance / 140) * 0.35;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);

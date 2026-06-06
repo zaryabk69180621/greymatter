@@ -744,12 +744,12 @@ body {
 }
 
 .advisory-note-top {
-  right: 0;
+  right: -80px;
   top: 45px;
 }
 
 .advisory-note-bottom {
-  left: 0;
+  left: -80px;
   bottom: 58px;
   animation-delay: 0.8s;
 }
@@ -2512,6 +2512,13 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .advisory-note-top {
+ display: none;
+}
+
+.advisory-note-bottom {
+  display: none;
+}
   .nav-links {
     display: none;
   }

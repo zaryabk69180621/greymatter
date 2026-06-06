@@ -1,0 +1,23 @@
+{
+  "name": "greymatter-accountancy",
+  "version": "1.0.0",
+  "description": "Modern accountancy website for Greymatter Accountancy",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && open dist/index.html",
+    "watch": "nodemon --ext ejs,css,js --watch src -e ejs,css,js --exec 'npm run build'"
+  },
+  "keywords": [
+    "accountancy",
+    "audit",
+    "tax",
+    "london"
+  ],
+  "author": "Greymatter Accountancy",
+  "license": "MIT",
+  "devDependencies": {
+    "ejs": "^3.1.9",
+    "nodemon": "^3.0.2"
+  }
+}

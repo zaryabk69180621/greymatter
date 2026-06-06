@@ -11,31 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <div class="navbar-content">
-        <div class="logo">
-          <div class="logo-icon"><i class="fas fa-chart-line"></i></div>
-          <span class="logo-text">Greymatter</span>
-        </div>
-        <ul class="nav-links">
-          <li><a href="../index.html#services">Services</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <%- include('partials/header', { rootPath: '../', currentPage: 'page' }) %>
 
   <!-- Page Header -->
   <section class="page-header">
@@ -176,45 +152,6 @@
       <a href="../index.html#contact" class="btn btn-primary">Book a Free Consultation</a>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="services.html">Audit</a></li>
-            <li><a href="services.html">Tax Reporting</a></li>
-            <li><a href="services.html">Bookkeeping</a></li>
-            <li><a href="services.html">VAT</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="industries.html">Industries</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Complaints</a></li>
-            <li><a href="#">Terms</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Greymatter Accountancy. All rights reserved.</p>
-        <p>Registered to carry on audit work in the UK by [recognised body].</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
+  <%- include('partials/footer', { rootPath: '../', currentPage: 'page' }) %>
 </body>
 </html>

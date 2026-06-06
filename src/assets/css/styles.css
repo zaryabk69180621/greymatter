@@ -70,6 +70,7 @@ body {
   font-weight: 700;
   font-family: var(--font-primary);
   color: var(--color-dark);
+  text-decoration: none;
 }
 
 .logo-icon {

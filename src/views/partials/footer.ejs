@@ -1,0 +1,51 @@
+<%
+  const pathPrefix = typeof rootPath !== 'undefined' ? rootPath : '';
+  const isHome = currentPage === 'home';
+  const servicesHref = isHome ? '#services' : 'services.html';
+  const taxHref = isHome ? '#services' : 'services.html';
+  const bookkeepingHref = isHome ? '#services' : 'services.html';
+  const vatHref = isHome ? '#services' : 'services.html';
+  const aboutHref = isHome ? '#about' : 'about.html';
+  const teamHref = isHome ? '#team' : 'team.html';
+  const pricingHref = isHome ? '#pricing' : 'pricing.html';
+  const industriesHref = isHome ? '#industries' : 'industries.html';
+%>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="<%= servicesHref %>">Audit</a></li>
+            <li><a href="<%= taxHref %>">Tax Reporting</a></li>
+            <li><a href="<%= bookkeepingHref %>">Bookkeeping</a></li>
+            <li><a href="<%= vatHref %>">VAT</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="<%= aboutHref %>">About</a></li>
+            <li><a href="<%= teamHref %>">Team</a></li>
+            <li><a href="<%= pricingHref %>">Pricing</a></li>
+            <li><a href="<%= industriesHref %>">Industries</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Greymatter Accountancy. All rights reserved.</p>
+        <p>Registered to carry on audit work in the UK by [recognised body].</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="<%= pathPrefix %>js/main.js"></script>

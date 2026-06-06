@@ -64,12 +64,49 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-card">
-          <div class="chart-animation">
-            <div class="chart-bar bar-1"></div>
-            <div class="chart-bar bar-2"></div>
-            <div class="chart-bar bar-3"></div>
-            <div class="chart-bar bar-4"></div>
+        <div class="hero-card" aria-label="Greymatter financial clarity dashboard">
+          <div class="hero-card-header">
+            <div>
+              <span class="eyebrow">Client workspace</span>
+              <strong>Financial clarity</strong>
+            </div>
+            <span class="live-pill"><i class="fas fa-circle"></i> In view</span>
+          </div>
+          <div class="pulse-chart">
+            <svg viewBox="0 0 420 180" role="img" aria-label="Animated cashflow trend">
+              <defs>
+                <linearGradient id="pulseFill" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#1e7a8f" stop-opacity="0.26" />
+                  <stop offset="100%" stop-color="#1e7a8f" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path class="chart-area" d="M0 132 C44 118 62 90 104 96 C146 102 154 142 200 122 C246 102 252 54 298 62 C344 70 350 112 420 76 L420 180 L0 180 Z"></path>
+              <path class="chart-line" d="M0 132 C44 118 62 90 104 96 C146 102 154 142 200 122 C246 102 252 54 298 62 C344 70 350 112 420 76"></path>
+            </svg>
+            <div class="chart-marker marker-one">
+              <span>Organised</span>
+            </div>
+            <div class="chart-marker marker-two">
+              <span>Clear view</span>
+            </div>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-tile">
+              <span>Books</span>
+              <strong>Clean</strong>
+            </div>
+            <div class="metric-tile">
+              <span>Planning</span>
+              <strong>Ready</strong>
+            </div>
+            <div class="metric-tile">
+              <span>Reporting</span>
+              <strong>Aligned</strong>
+            </div>
+          </div>
+          <div class="ledger-strip">
+            <span><i class="fas fa-check"></i> Records in order</span>
+            <span><i class="fas fa-shield-halved"></i> Compliance minded</span>
           </div>
         </div>
       </div>
@@ -107,10 +144,33 @@
           </div>
         </div>
         <div class="about-visual">
-          <div class="team-placeholder">
-            <div class="avatar avatar-1">SC</div>
-            <div class="avatar avatar-2">JV</div>
-            <div class="avatar avatar-3">ER</div>
+          <div class="advisory-visual" aria-label="Greymatter advisory workflow">
+            <div class="advisory-panel advisory-main">
+              <div class="panel-topline">
+                <span>Advisory flow</span>
+                <strong>Ready</strong>
+              </div>
+              <div class="close-ring">
+                <span><i class="fas fa-check"></i></span>
+              </div>
+              <p>Clear records, useful reporting, and calm guidance around the next decision.</p>
+            </div>
+            <div class="advisory-panel advisory-note advisory-note-top">
+              <i class="fas fa-file-invoice-dollar"></i>
+              <div>
+                <strong>Tax plan</strong>
+                <span>Quarterly actions</span>
+              </div>
+            </div>
+            <div class="advisory-panel advisory-note advisory-note-bottom">
+              <i class="fas fa-chart-pie"></i>
+              <div>
+                <strong>Board pack</strong>
+                <span>Clear KPIs</span>
+              </div>
+            </div>
+            <div class="advisory-orbit orbit-one"></div>
+            <div class="advisory-orbit orbit-two"></div>
           </div>
         </div>
       </div>
@@ -345,7 +405,7 @@
             <i class="fas fa-star"></i>
           </div>
           <p class="testimonial-text">
-            "Greymatter identified £18k in unclaimed R&D tax credits for our fintech. Their audit prep was painless and professional."
+            "Greymatter brought real clarity to our tax planning and audit prep. The whole process felt calm, structured, and professional."
           </p>
           <p class="testimonial-author">
             <strong>Naomi A.</strong><br>

@@ -1,14 +1,14 @@
 <%
   const pathPrefix = typeof rootPath !== 'undefined' ? rootPath : '';
   const isHome = currentPage === 'home';
-  const servicesHref = isHome ? '#services' : 'services.html';
-  const taxHref = isHome ? '#services' : 'services.html';
-  const bookkeepingHref = isHome ? '#services' : 'services.html';
-  const vatHref = isHome ? '#services' : 'services.html';
+  const servicesHref = isHome ? 'pages/services.html' : 'services.html';
+  const taxHref = servicesHref;
+  const bookkeepingHref = servicesHref;
+  const vatHref = servicesHref;
   const aboutHref = isHome ? '#about' : 'about.html';
-  const teamHref = isHome ? '#team' : 'team.html';
-  const pricingHref = isHome ? '#pricing' : 'pricing.html';
-  const industriesHref = isHome ? '#industries' : 'industries.html';
+  const teamHref = isHome ? 'pages/team.html' : 'team.html';
+  const pricingHref = isHome ? 'pages/pricing.html' : 'pricing.html';
+  const industriesHref = isHome ? 'pages/industries.html' : 'industries.html';
 %>
   <!-- Footer -->
   <footer class="footer">

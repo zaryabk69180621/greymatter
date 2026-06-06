@@ -2,8 +2,8 @@
   const pathPrefix = typeof rootPath !== 'undefined' ? rootPath : '';
   const isHome = currentPage === 'home';
   const homeHref = isHome ? '#' : `${pathPrefix}index.html`;
-  const servicesHref = isHome ? '#services' : `${pathPrefix}index.html#services`;
-  const industriesHref = isHome ? '#industries' : 'industries.html';
+  const servicesHref = isHome ? 'pages/services.html' : 'services.html';
+  const industriesHref = isHome ? 'pages/industries.html' : 'industries.html';
   const contactHref = isHome ? '#contact' : `${pathPrefix}index.html#contact`;
 %>
   <!-- Navigation -->

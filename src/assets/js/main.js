@@ -245,7 +245,7 @@ if (canvas && heroSection && window.innerWidth >= 1024) {
       this.y = y + (Math.random() - 0.5) * 100;
       this.vx = (Math.random() - 0.5) * 2;
       this.vy = (Math.random() - 0.5) * 2;
-      this.radius = Math.random() * 2 + 1;
+      this.radius = Math.random() * 3.5 + 2.5;
       this.life = 1;
       this.maxLife = Math.random() * 100 + 200;
       this.age = 0;
@@ -290,8 +290,8 @@ if (canvas && heroSection && window.innerWidth >= 1024) {
       }
 
       // Draw connection lines
-      ctx.strokeStyle = `rgba(30, 122, 143, 0.15)`;
-      ctx.lineWidth = 1;
+      ctx.strokeStyle = `rgba(30, 122, 143, 0.35)`;
+      ctx.lineWidth = 2.5;
 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {

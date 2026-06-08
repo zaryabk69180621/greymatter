@@ -2756,7 +2756,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 32px;
-    z-index: 99;
+    z-index: 102;
     
     /* Animation base */
     opacity: 0;
@@ -2790,7 +2790,7 @@ body {
   }
 
   .logo {
-    z-index: 101;
+    z-index: 103;
     position: relative;
   }
 
@@ -2805,6 +2805,8 @@ body {
 
   .hamburger {
     display: flex;
+    z-index: 103;
+    position: relative;
   }
 
   .hero-title {

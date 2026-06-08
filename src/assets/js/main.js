@@ -2,15 +2,20 @@
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-if (hamburger) {
+if (hamburger && navLinks) {
   hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    // Lock scroll when menu is active
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
   });
 
   // Close menu when a link is clicked
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-      navLinks.style.display = 'none';
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      document.body.style.overflow = '';
     });
   });
 }
@@ -123,36 +128,7 @@ document.querySelectorAll('.service-card').forEach(card => {
   });
 });
 
-// Responsive menu
-const navLinksMenu = document.querySelector('.nav-links');
-if (navLinksMenu) {
-  // Add flex display on small screens
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
-  
-  function handleMediaChange(e) {
-    if (e.matches) {
-      // Mobile view
-      navLinksMenu.style.display = 'none';
-      navLinksMenu.style.position = 'absolute';
-      navLinksMenu.style.top = '100%';
-      navLinksMenu.style.left = '0';
-      navLinksMenu.style.right = '0';
-      navLinksMenu.style.backgroundColor = 'white';
-      navLinksMenu.style.flexDirection = 'column';
-      navLinksMenu.style.gap = '0';
-      navLinksMenu.style.padding = '16px 0';
-    } else {
-      // Desktop view
-      navLinksMenu.style.display = 'flex';
-      navLinksMenu.style.position = 'static';
-      navLinksMenu.style.backgroundColor = 'transparent';
-      navLinksMenu.style.flexDirection = 'row';
-    }
-  }
-  
-  mediaQuery.addListener(handleMediaChange);
-  handleMediaChange(mediaQuery);
-}
+// Responsive menu handled via CSS media queries
 
 // Counter animation for statistics
 function animateValue(element, start, end, duration) {

@@ -126,6 +126,8 @@ body {
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
+  z-index: 101;
+  position: relative;
 }
 
 .hamburger span {
@@ -133,6 +135,22 @@ body {
   height: 2px;
   background: var(--color-text);
   transition: var(--transition);
+}
+
+.hamburger.active span {
+  background: var(--color-white) !important;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -1402,6 +1420,10 @@ body {
   border-bottom: 1px solid rgba(30, 122, 143, 0.1);
 }
 
+.page-header-light h1 {
+  color: var(--color-primary-dark);
+}
+
 .page-header h1 {
   font-family: var(--font-primary);
   font-size: 48px;
@@ -2452,6 +2474,207 @@ body {
   display: block;
 }
 
+/* ==========================================================================
+   Premium Unified Dark Theme & Glassmorphism Implementation
+   ========================================================================== */
+
+/* Set dark gradient background for all page content sections */
+.services-page,
+.about-page,
+.team-page,
+.pricing-page,
+.resources-section,
+.blog-section,
+.tools-section,
+.newsletter-section,
+.industries-page {
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary-dark) 100%) !important;
+  color: var(--color-white) !important;
+}
+
+/* Base text contrast overrides for dark layout */
+.services-page .section-header h2,
+.services-page .section-header p,
+.about-page h2,
+.about-page p,
+.about-page li,
+.team-page .section-header h2,
+.team-page .section-header p,
+.pricing-page .section-header h2,
+.pricing-page .section-header p,
+.resources-section h2,
+.resources-section p,
+.blog-section h2,
+.blog-section p,
+.tools-section h2,
+.tools-section p,
+.newsletter-section h2,
+.newsletter-section p {
+  color: var(--color-white) !important;
+}
+
+.services-page .section-header p,
+.about-page p:not(strong),
+.about-page li,
+.team-page .section-header p,
+.pricing-page .section-header p,
+.resources-section p,
+.blog-section p,
+.tools-section p,
+.newsletter-section p {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.about-page .credentials-list li {
+  color: var(--color-white) !important;
+}
+
+.about-page .credentials-list li:before {
+  color: var(--color-secondary) !important;
+}
+
+/* Glassmorphism Cards Base Styles for Dark Sections */
+.services-page .service-card,
+.services-detail .service-detail-card,
+.about-page .philosophy-card,
+.about-page .why-card,
+.about-page .team-preview-card,
+.team-page .team-member,
+.team-member-detail,
+.pricing-page .pricing-card,
+.resources-section .resource-card,
+.blog-section .blog-card,
+.tools-section .tool-card,
+.industries-page .industry-card {
+  background: rgba(255, 255, 255, 0.07) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: var(--color-white) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Specific inner element color fixes for glass cards */
+.services-page .service-card h3,
+.services-detail .service-detail-card h2,
+.services-detail .service-detail-card h3,
+.about-page .philosophy-card h3,
+.about-page .why-card h3,
+.about-page .team-preview-card h3,
+.team-page .team-member h3,
+.pricing-page .pricing-card h3,
+.resources-section .resource-card h3,
+.blog-section .blog-card h3,
+.tools-section .tool-card h3,
+.industries-page .industry-card h3 {
+  color: var(--color-white) !important;
+}
+
+.services-page .service-card p,
+.services-detail .service-detail-card p,
+.services-detail .service-detail-card li,
+.about-page .philosophy-card p,
+.about-page .why-card p,
+.about-page .team-preview-card p,
+.team-page .team-member p,
+.team-page .team-member .bio,
+.pricing-page .pricing-card p,
+.pricing-page .pricing-card li,
+.resources-section .resource-card p,
+.blog-section .blog-card p,
+.tools-section .tool-card p,
+.industries-page .industry-card p {
+  color: rgba(255, 255, 255, 0.76) !important;
+}
+
+/* Aligning all cards on all pages to the signature translateY(-8px) hover animation */
+.services-page .service-card:hover,
+.services-detail .service-detail-card:hover,
+.about-page .philosophy-card:hover,
+.about-page .why-card:hover,
+.about-page .team-preview-card:hover,
+.team-page .team-member:hover,
+.team-member-detail:hover,
+.pricing-page .pricing-card:hover,
+.resources-section .resource-card:hover,
+.blog-section .blog-card:hover,
+.tools-section .tool-card:hover,
+.industries-page .industry-card:hover,
+.usp-card:hover,
+.step:hover,
+.testimonial-card:hover,
+.stat:hover {
+  transform: translateY(-8px) !important;
+  border-color: var(--color-secondary) !important;
+  box-shadow: 0 20px 48px rgba(30, 122, 143, 0.35) !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+}
+
+/* Featured Pricing Card adjustments */
+.pricing-page .pricing-card-featured {
+  border-color: var(--color-secondary) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 20px 50px rgba(212, 165, 116, 0.25) !important;
+  transform: scale(1.02);
+}
+
+.pricing-page .pricing-card-featured:hover {
+  transform: scale(1.02) translateY(-8px) !important;
+}
+
+.pricing-page .pricing-card .price {
+  color: var(--color-white) !important;
+}
+
+.pricing-page .pricing-card .price span {
+  color: var(--color-secondary) !important;
+}
+
+.pricing-page .pricing-card .features li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* Icon / Link / Sub-element transitions on hover */
+.services-page .service-card:hover .service-icon,
+.about-page .philosophy-card:hover i,
+.resources-section .resource-card:hover .resource-icon,
+.tools-section .tool-card:hover i,
+.usp-card:hover .usp-icon,
+.industry-card:hover .industry-icon {
+  color: var(--color-secondary) !important;
+  transform: scale(1.15) !important;
+}
+
+/* Link modifications */
+.service-link, .read-more, .resource-link, .tool-card a {
+  color: var(--color-secondary) !important;
+}
+.service-card:hover .service-link,
+.blog-card:hover .read-more,
+.resource-card:hover .resource-link,
+.tool-card:hover a {
+  color: var(--color-white) !important;
+}
+
+/* Newsletter Input visual enhancement */
+.newsletter-form input {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: var(--color-white) !important;
+  transition: var(--transition) !important;
+}
+.newsletter-form input:focus {
+  outline: none !important;
+  border-color: var(--color-secondary) !important;
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.2) !important;
+}
+.newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+
 @media (min-width: 1024px) {
   .cursor-canvas {
     display: block;
@@ -2520,7 +2743,64 @@ body {
   display: none;
 }
   .nav-links {
-    display: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 20, 25, 0.96);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    z-index: 99;
+    
+    /* Animation base */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-white);
+  }
+
+  .nav-links a:hover {
+    color: var(--color-secondary);
+  }
+
+  .nav-links .nav-cta {
+    font-size: 20px;
+    padding: 14px 36px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  }
+
+  .logo {
+    z-index: 101;
+    position: relative;
+  }
+
+  .logo img {
+    transition: var(--transition);
+  }
+
+  /* Invert logo color on active mobile menu overlay so it stands out */
+  body:has(.nav-links.active) .logo img {
+    filter: brightness(0) invert(1);
   }
 
   .hamburger {

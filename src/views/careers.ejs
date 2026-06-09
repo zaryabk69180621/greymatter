@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers - Greymatter Accountancy</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <%- include('partials/header', { rootPath: '../', currentPage: 'page' }) %>
+
+  <section class="page-header page-header-light">
+    <div class="container">
+      <h1>Careers at Greymatter</h1>
+      <p>Apply your grey matter where it counts. Join our team of London-based specialists.</p>
+    </div>
+  </section>
+
+  <section class="about-page">
+    <div class="container">
+      <div class="about-section">
+        <h2>Join Our Team</h2>
+        <p>At Greymatter Accountancy, we believe that accounting isn't just about spreadsheets — it's about people, strategy, and analytical thinking. We provide a supportive, high-growth environment in London where you can develop your skills and work directly with ambitious SMEs, hospitality businesses, startups, and landlords.</p>
+      </div>
+
+      <div class="about-section">
+        <h2>Current Job Offerings</h2>
+        
+        <!-- Status Card -->
+        <div class="philosophy-card" style="text-align: center; padding: 48px 24px; margin-bottom: 40px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px;">
+          <div style="font-size: 48px; color: var(--color-secondary); margin-bottom: 20px;">
+            <i class="fas fa-briefcase-clock"></i>
+          </div>
+          <h3 style="font-size: 24px; color: var(--color-white); margin-bottom: 16px;">No Active Openings</h3>
+          <p style="color: rgba(255, 255, 255, 0.8); max-width: 600px; margin: 0 auto 24px; line-height: 1.8;">
+            We currently do not have any open positions. However, we are always on the lookout for talented, motivated individuals. When new opportunities arise, we will post them here first.
+          </p>
+          <a href="mailto:careers@greymatteraccountancy.co.uk" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Send Speculative CV
+          </a>
+        </div>
+      </div>
+
+      <div class="about-section">
+        <h2>What We Value</h2>
+        <div class="philosophy-points">
+          <div class="philosophy-card">
+            <h3><i class="fas fa-brain"></i> Strategic Thinking</h3>
+            <p>We look beyond compliance. Our team applies intelligence and commercial acumen to help our clients make real business decisions.</p>
+          </div>
+          <div class="philosophy-card">
+            <h3><i class="fas fa-arrows-spin"></i> Direct Responsibility</h3>
+            <p>From day one, you'll have ownership of client portfolios and work closely with directors, fostering rapid professional growth.</p>
+          </div>
+          <div class="philosophy-card">
+            <h3><i class="fas fa-users"></i> London Culture</h3>
+            <p>We work in a modern, collaborative setting, offering hybrid flexibility and standard-setting support for professional certifications (ACCA/ICAEW).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Stay in Touch</h2>
+      <p>Have questions about working at Greymatter? Reach out to our team.</p>
+      <a href="mailto:hello@greymatteraccountancy.co.uk" class="btn btn-primary">Contact HR Team</a>
+    </div>
+  </section>
+  <%- include('partials/footer', { rootPath: '../', currentPage: 'page' }) %>
+</body>
+</html>

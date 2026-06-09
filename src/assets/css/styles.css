@@ -2961,3 +2961,22 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Custom Additions */
+a.service-card {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.btn-whatsapp {
+  background: #25D366 !important;
+  color: var(--color-white) !important;
+  border: none !important;
+}
+
+.btn-whatsapp:hover {
+  background: #128C7E !important;
+  color: var(--color-white) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3) !important;
+}

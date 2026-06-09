@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Solutions - Greymatter Accountancy</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <%- include('partials/header', { rootPath: '../', currentPage: 'page' }) %>
+
+  <section class="page-header page-header-light">
+    <div class="container">
+      <h1>Accounting Software Solutions</h1>
+      <p>Modern cloud accounting implementations to keep your business organized, automated, and ready for growth.</p>
+    </div>
+  </section>
+
+  <section class="services-detail services-page">
+    <div class="container">
+      
+      <div class="services-grid" style="margin-bottom: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px;">
+        
+        <!-- QuickBooks Setup -->
+        <div class="service-detail-card">
+          <div class="service-detail-header">
+            <div class="service-detail-icon"><i class="fas fa-desktop"></i></div>
+            <h2>QuickBooks Setup for Businesses</h2>
+          </div>
+          <div class="service-detail-content">
+            <p>Ensure your accounting platform is configured correctly from day one. We customize QuickBooks Online specifically to suit your business workflows, tax status, and reporting requirements.</p>
+            <h3>What we cover:</h3>
+            <ul>
+              <li>QuickBooks subscription configuration and licensing advice</li>
+              <li>Bespoke Chart of Accounts setup matching your business model</li>
+              <li>Bank feed linking and automated bank rules setup</li>
+              <li>Invoicing and sales template customization with your branding</li>
+              <li>QuickBooks user training and initial walkthrough support</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Data Migration -->
+        <div class="service-detail-card">
+          <div class="service-detail-header">
+            <div class="service-detail-icon"><i class="fas fa-database"></i></div>
+            <h2>Data Migration (Excel to QuickBooks)</h2>
+          </div>
+          <div class="service-detail-content">
+            <p>Transitioning from old-school spreadsheets can be daunting. We securely clean, format, and migrate your legacy Excel and spreadsheet financial history directly into QuickBooks Online.</p>
+            <h3>What we cover:</h3>
+            <ul>
+              <li>Historical ledger analysis and spreadsheet data cleanup</li>
+              <li>Seamless import of customer, supplier, and inventory lists</li>
+              <li>Opening balance reconciliation and verification</li>
+              <li>Historical transaction mapping (up to multiple financial years)</li>
+              <li>Post-migration audit to ensure 100% financial accuracy</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Modernize Your Accounting Software?</h2>
+      <p>Talk to our QuickBooks certified advisors to streamline your bookkeeping today.</p>
+      <a href="../index.html#contact" class="btn btn-primary">Book a Demo Call</a>
+    </div>
+  </section>
+  <%- include('partials/footer', { rootPath: '../', currentPage: 'page' }) %>
+</body>
+</html>

@@ -1,11 +1,7 @@
-<%
-  const pathPrefix = typeof rootPath !== 'undefined' ? rootPath : '';
-  const isHome = currentPage === 'home';
-  const homeHref = isHome ? '#' : `${pathPrefix}index.html`;
-  const servicesHref = isHome ? 'pages/services.html' : 'services.html';
-  const industriesHref = isHome ? 'pages/industries.html' : 'industries.html';
-  const contactHref = isHome ? '#contact' : `${pathPrefix}index.html#contact`;
-%>
+<% const pathPrefix=typeof rootPath !=='undefined' ? rootPath : '' ; const isHome=currentPage==='home' ; const
+  homeHref=isHome ? '#' : `${pathPrefix}index.html`; const servicesHref=isHome ? 'pages/services.html' : 'services.html'
+  ; const industriesHref=isHome ? 'pages/industries.html' : 'industries.html' ; const contactHref=isHome ? '#contact' :
+  `${pathPrefix}index.html#contact`; %>
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container">
@@ -17,8 +13,7 @@
           <li><a href="<%= servicesHref %>">Services</a></li>
           <li><a href="<%= industriesHref %>">Industries</a></li>
           <li><a href="<%= isHome ? 'pages/about.html' : 'about.html' %>">About</a></li>
-          <li><a href="<%= isHome ? 'pages/team.html' : 'team.html' %>">Team</a></li>
-          <li><a href="<%= isHome ? 'pages/pricing.html' : 'pricing.html' %>">Pricing</a></li>
+          <li><a href="<%= isHome ? 'pages/careers.html' : 'careers.html' %>">Careers</a></li>
           <li><a href="<%= contactHref %>" class="nav-cta">Contact</a></li>
         </ul>
         <div class="hamburger" id="hamburger">

@@ -49,8 +49,11 @@ const pages = [
   { template: 'industries.ejs', output: 'pages/industries.html' },
   { template: 'about.ejs', output: 'pages/about.html' },
   { template: 'team.ejs', output: 'pages/team.html' },
-  { template: 'pricing.ejs', output: 'pages/pricing.html' },
-  { template: 'resources.ejs', output: 'pages/resources.html' }
+  { template: 'careers.ejs', output: 'pages/careers.html' },
+  { template: 'resources.ejs', output: 'pages/resources.html' },
+  { template: 'personal-tax.ejs', output: 'pages/personal-tax.html' },
+  { template: 'business-compliance.ejs', output: 'pages/business-compliance.html' },
+  { template: 'software-solutions.ejs', output: 'pages/software-solutions.html' }
 ];
 
 // Render all pages

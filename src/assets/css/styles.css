@@ -14,10 +14,10 @@
   --color-text: #1a1f2e;
   --color-text-light: #5a6674;
   --color-border: #e8ecf1;
-  
+
   --font-primary: 'Sora', sans-serif;
   --font-secondary: 'Inter', sans-serif;
-  
+
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-sm: 0 2px 8px rgba(15, 20, 25, 0.08);
   --shadow-md: 0 8px 24px rgba(15, 20, 25, 0.12);
@@ -206,9 +206,12 @@ body {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0);
   }
+
   50% {
     transform: translate(30px, -30px);
   }
@@ -232,6 +235,7 @@ body {
     opacity: 0;
     transform: translateX(-40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -334,6 +338,7 @@ body {
     opacity: 0;
     transform: translateX(40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -378,8 +383,15 @@ body {
 }
 
 @keyframes subtleShift {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-10px, 12px); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-10px, 12px);
+  }
 }
 
 .hero-card-header {
@@ -428,8 +440,17 @@ body {
 }
 
 @keyframes livePulse {
-  0%, 100% { opacity: 0.45; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.25); }
+
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
 }
 
 .pulse-chart {
@@ -463,12 +484,21 @@ body {
 }
 
 @keyframes drawLine {
-  to { stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes breatheLine {
-  0%, 100% { stroke-width: 6; }
-  50% { stroke-width: 7.5; }
+
+  0%,
+  100% {
+    stroke-width: 6;
+  }
+
+  50% {
+    stroke-width: 7.5;
+  }
 }
 
 .chart-marker {
@@ -498,8 +528,15 @@ body {
 }
 
 @keyframes floatMarker {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .hero-metrics {
@@ -660,7 +697,9 @@ body {
 }
 
 @keyframes rotateSoft {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .advisory-panel {
@@ -825,6 +864,10 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 32px;
+}
+
+.service-card * {
+  text-decoration: none;
 }
 
 .service-card {
@@ -1316,7 +1359,7 @@ body {
   color: var(--color-dark);
 }
 
-.contact-info > p {
+.contact-info>p {
   font-size: 16px;
   color: var(--color-text-light);
   margin-bottom: 40px;
@@ -1840,7 +1883,7 @@ body {
   text-align: center;
 }
 
-.supporting-team > .container > p {
+.supporting-team>.container>p {
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
   margin-bottom: 40px;
@@ -1892,7 +1935,7 @@ body {
   text-align: center;
 }
 
-.team-culture > .container > p {
+.team-culture>.container>p {
   text-align: center;
   color: var(--color-text-light);
   margin-bottom: 40px;
@@ -2648,9 +2691,13 @@ body {
 }
 
 /* Link modifications */
-.service-link, .read-more, .resource-link, .tool-card a {
+.service-link,
+.read-more,
+.resource-link,
+.tool-card a {
   color: var(--color-secondary) !important;
 }
+
 .service-card:hover .service-link,
 .blog-card:hover .read-more,
 .resource-card:hover .resource-link,
@@ -2665,11 +2712,13 @@ body {
   color: var(--color-white) !important;
   transition: var(--transition) !important;
 }
+
 .newsletter-form input:focus {
   outline: none !important;
   border-color: var(--color-secondary) !important;
   box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.2) !important;
 }
+
 .newsletter-form input::placeholder {
   color: rgba(255, 255, 255, 0.5) !important;
 }
@@ -2735,13 +2784,14 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .advisory-note-top {
- display: none;
-}
+  .advisory-note-top {
+    display: none;
+  }
 
-.advisory-note-bottom {
-  display: none;
-}
+  .advisory-note-bottom {
+    display: none;
+  }
+
   .nav-links {
     display: flex;
     position: fixed;
@@ -2757,7 +2807,7 @@ body {
     justify-content: center;
     gap: 32px;
     z-index: 102;
-    
+
     /* Animation base */
     opacity: 0;
     pointer-events: none;

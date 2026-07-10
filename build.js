@@ -7,6 +7,9 @@ if (!fs.existsSync('./dist')) {
   fs.mkdirSync('./dist', { recursive: true });
 }
 
+// Write CNAME for custom domain
+fs.writeFileSync('./dist/CNAME', 'greymatteraccountancy.uk');
+
 // Create dist subdirectories
 ['css', 'js', 'pages'].forEach(dir => {
   if (!fs.existsSync(`./dist/${dir}`)) {

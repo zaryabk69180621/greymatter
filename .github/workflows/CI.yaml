@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master  # or master, depending on your default branch
+      - chnagesv2
   workflow_dispatch:  # Allows manual trigger
 
 permissions:

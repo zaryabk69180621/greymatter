@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,348 +8,373 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-  <%- include('partials/header', { rootPath: '', currentPage: 'home' }) %>
+  <%- include('partials/header', { rootPath: '' , currentPage: 'home' }) %>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-background">
-      <div class="gradient-blob gradient-blob-1"></div>
-      <div class="gradient-blob gradient-blob-2"></div>
-    </div>
-    <div class="container hero-container">
-      <div class="hero-content">
-        <h1 class="hero-title">
-          Greymatter <span class="gradient-text">Accountancy</span>.<br>
-          <span class="gradient-text-alt">Intelligent Accounting</span>.
-        </h1>
-        <p class="hero-subtitle">
-Tax compliance and software solutions for ambitious UK businesses- where grey matter meets financial accuracy.        </p>
-        <div class="hero-ctas">
-          <button class="btn btn-primary" onclick="document.querySelector('[data-section=contact]').scrollIntoView({behavior: 'smooth'})">
-            Get a Free Consultation
-          </button>
-          <a href="tel:+447523889308" class="btn btn-secondary">
-            <span class="phone-icon"><i class="fas fa-phone"></i></span> Call +447523889308
-          </a>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-background">
+        <div class="gradient-blob gradient-blob-1"></div>
+        <div class="gradient-blob gradient-blob-2"></div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-card" aria-label="Greymatter financial clarity dashboard">
-          <div class="hero-card-header">
-            <div>
-              <span class="eyebrow">Client workspace</span>
-              <strong>Financial clarity</strong>
-            </div>
-            <span class="live-pill"><i class="fas fa-circle"></i> In view</span>
-          </div>
-          <div class="pulse-chart">
-            <svg viewBox="0 0 420 180" role="img" aria-label="Animated cashflow trend">
-              <defs>
-                <linearGradient id="pulseFill" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stop-color="#1e7a8f" stop-opacity="0.26" />
-                  <stop offset="100%" stop-color="#1e7a8f" stop-opacity="0" />
-                </linearGradient>
-              </defs>
-              <path class="chart-area" d="M0 132 C44 118 62 90 104 96 C146 102 154 142 200 122 C246 102 252 54 298 62 C344 70 350 112 420 76 L420 180 L0 180 Z"></path>
-              <path class="chart-line" d="M0 132 C44 118 62 90 104 96 C146 102 154 142 200 122 C246 102 252 54 298 62 C344 70 350 112 420 76"></path>
-            </svg>
-            <div class="chart-marker marker-one">
-              <span>Organised</span>
-            </div>
-            <div class="chart-marker marker-two">
-              <span>Clear view</span>
-            </div>
-          </div>
-          <div class="hero-metrics">
-            <div class="metric-tile">
-              <span>Books</span>
-              <strong>Clean</strong>
-            </div>
-            <div class="metric-tile">
-              <span>Planning</span>
-              <strong>Ready</strong>
-            </div>
-            <div class="metric-tile">
-              <span>Reporting</span>
-              <strong>Aligned</strong>
-            </div>
-          </div>
-          <div class="ledger-strip">
-            <span><i class="fas fa-check"></i> Records in order</span>
-            <span><i class="fas fa-shield-halved"></i> Compliance minded</span>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Greymatter <span class="gradient-text">Accountancy</span>.<br>
+            <span class="gradient-text-alt">Intelligent Accounting</span>.
+          </h1>
+          <p class="hero-subtitle">
+            Tax compliance and software solutions for ambitious UK businesses- where grey matter meets financial
+            accuracy. </p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary"
+              onclick="document.querySelector('[data-section=contact]').scrollIntoView({behavior: 'smooth'})">
+              Get a Free Consultation
+            </button>
+            <a href="tel:+447523889308" class="btn btn-secondary">
+              <span class="phone-icon"><i class="fas fa-phone"></i></span> Call +447523889308
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-      <!-- Cursor-tracking canvas for larger screens -->
-      <canvas id="cursorCanvas" class="cursor-canvas"></canvas>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-content">
-        <div class="about-text">
-          <h2>We Don't Just Count Numbers</h2>
-          <p>We interpret them.</p>
-          <p class="about-description">
-            Based in the heart of London, we serve entrepreneurs, SMEs, and established firms with a blend of technical rigour and commercial instinct. Our name reflects our philosophy: <em>grey matter</em> — intelligence, problem-solving, and strategic thinking applied to your finances.
-          </p>
-          <p class="about-description">
-            We are regulated by UK professional bodies and offer services across Greater London — from Soho startups to City firms.
-          </p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-number">Many</span>
-              <span class="stat-label">Businesses Supported</span>
+        <div class="hero-visual">
+          <div class="hero-card" aria-label="Greymatter financial clarity dashboard">
+            <div class="hero-card-header">
+              <div>
+                <span class="eyebrow">Client workspace</span>
+                <strong>Financial clarity</strong>
+              </div>
+              <span class="live-pill"><i class="fas fa-circle"></i> In view</span>
             </div>
-            <div class="stat">
-              <span class="stat-number">Deep</span>
-              <span class="stat-label">Professional Experience</span>
+            <div class="pulse-chart">
+              <svg viewBox="0 0 420 180" role="img" aria-label="Animated cashflow trend">
+                <defs>
+                  <linearGradient id="pulseFill" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#1e7a8f" stop-opacity="0.26" />
+                    <stop offset="100%" stop-color="#1e7a8f" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path class="chart-area"
+                  d="M0 132 C44 118 62 90 104 96 C146 102 154 142 200 122 C246 102 252 54 298 62 C344 70 350 112 420 76 L420 180 L0 180 Z">
+                </path>
+                <path class="chart-line"
+                  d="M0 132 C44 118 62 90 104 96 C146 102 154 142 200 122 C246 102 252 54 298 62 C344 70 350 112 420 76">
+                </path>
+              </svg>
+              <div class="chart-marker marker-one">
+                <span>Organised</span>
+              </div>
+              <div class="chart-marker marker-two">
+                <span>Clear view</span>
+              </div>
             </div>
-            <div class="stat">
-              <span class="stat-number">Broad</span>
-              <span class="stat-label">Financial Oversight</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-visual">
-          <div class="advisory-visual" aria-label="Greymatter advisory workflow">
-            <div class="advisory-panel advisory-main">
-              <div class="panel-topline">
-                <span>Advisory flow</span>
+            <div class="hero-metrics">
+              <div class="metric-tile">
+                <span>Books</span>
+                <strong>Clean</strong>
+              </div>
+              <div class="metric-tile">
+                <span>Planning</span>
                 <strong>Ready</strong>
               </div>
-              <div class="close-ring">
-                <span><i class="fas fa-check"></i></span>
-              </div>
-              <p>Clear records, useful reporting, and calm guidance around the next decision.</p>
-            </div>
-            <div class="advisory-panel advisory-note advisory-note-top">
-              <i class="fas fa-file-invoice-dollar"></i>
-              <div>
-                <strong>Tax plan</strong>
-                <span>Quarterly actions</span>
+              <div class="metric-tile">
+                <span>Reporting</span>
+                <strong>Aligned</strong>
               </div>
             </div>
-            <div class="advisory-panel advisory-note advisory-note-bottom">
-              <i class="fas fa-chart-pie"></i>
-              <div>
-                <strong>Board pack</strong>
-                <span>Clear KPIs</span>
-              </div>
+            <div class="ledger-strip">
+              <span><i class="fas fa-check"></i> Records in order</span>
+              <span><i class="fas fa-shield-halved"></i> Compliance minded</span>
             </div>
-            <div class="advisory-orbit orbit-one"></div>
-            <div class="advisory-orbit orbit-two"></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      <!-- Cursor-tracking canvas for larger screens -->
+      <canvas id="cursorCanvas" class="cursor-canvas"></canvas>
+    </section>
 
-  <!-- Why Greymatter Section -->
-  <section class="why-us" id="why">
-    <div class="container">
-      <div class="section-header">
-        <h2>Why Greymatter Accountancy</h2>
-        <p>Three reasons we're different</p>
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>We Don't Just Count Numbers</h2>
+            <p>We interpret them.</p>
+            <p class="about-description">
+              Based in the heart of London, we serve entrepreneurs, SMEs, and established firms with a blend of
+              technical rigour and commercial instinct. Our name reflects our philosophy: <em>grey matter</em> —
+              intelligence, problem-solving, and strategic thinking applied to your finances.
+            </p>
+            <p class="about-description">
+              We are regulated by UK professional bodies and offer services across Greater London — from Soho startups
+              to City firms.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number">Many</span>
+                <span class="stat-label">Businesses Supported</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">Deep</span>
+                <span class="stat-label">Professional Experience</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">Broad</span>
+                <span class="stat-label">Financial Oversight</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="advisory-visual" aria-label="Greymatter advisory workflow">
+              <div class="advisory-panel advisory-main">
+                <div class="panel-topline">
+                  <span>Advisory flow</span>
+                  <strong>Ready</strong>
+                </div>
+                <div class="close-ring">
+                  <span><i class="fas fa-check"></i></span>
+                </div>
+                <p>Clear records, useful reporting, and calm guidance around the next decision.</p>
+              </div>
+              <div class="advisory-panel advisory-note advisory-note-top">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <div>
+                  <strong>Tax plan</strong>
+                  <span>Quarterly actions</span>
+                </div>
+              </div>
+              <div class="advisory-panel advisory-note advisory-note-bottom">
+                <i class="fas fa-chart-pie"></i>
+                <div>
+                  <strong>Board pack</strong>
+                  <span>Clear KPIs</span>
+                </div>
+              </div>
+              <div class="advisory-orbit orbit-one"></div>
+              <div class="advisory-orbit orbit-two"></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="usp-grid">
-        <div class="usp-card">
-          <div class="usp-icon"><i class="fas fa-brain"></i></div>
-          <h3>Brain Over Boilerplate</h3>
-          <p>We don't use templates. We apply analytical thinking to your unique structure. Every business is different, and your accounting should reflect that.</p>
-        </div>
-        <div class="usp-card">
-          <div class="usp-icon"><i class="fas fa-bolt"></i></div>
-          <h3>London Speed + Precision</h3>
-          <p>Flexible approach to working for busy owners. We move at the pace of your business — working with you, not against you.</p>
-        </div>
-        <div class="usp-card">
-          <div class="usp-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-          <h3>Fully UK Compliant</h3>
-          <p>Registered with ACCA insured, and up to date with HMRC's latest rules. Compliance isn't optional — it's the foundation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- How It Works Section -->
-  <section class="how-it-works">
-    <div class="container">
-      <div class="section-header">
-        <h2>How It Works</h2>
-        <p>Three simple steps to better accounting</p>
-      </div>
-      <div class="steps-container">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Initial Consultation</h3>
-            <p>Free, no obligation. We review your current accounting setup and identify opportunities for improvement.</p>
-          </div>
+    <!-- Why Greymatter Section -->
+    <section class="why-us" id="why">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Greymatter Accountancy</h2>
+          <p>Three reasons we're different</p>
         </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Tailored Scope & Fee</h3>
-            <p>Fixed monthly or project pricing with No hidden charges. Transparent from day one.</p>
+        <div class="usp-grid">
+          <div class="usp-card">
+            <div class="usp-icon"><i class="fas fa-brain"></i></div>
+            <h3>Brain Over Boilerplate</h3>
+            <p>We don't use templates. We apply analytical thinking to your unique structure. Every business is
+              different, and your accounting should reflect that.</p>
           </div>
-        </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Onboarding & Handover</h3>
-            <p>We connect to your data sources or set up your books from scratch, for a seamless, ensuring seamless transition.</p>
+          <div class="usp-card">
+            <div class="usp-icon"><i class="fas fa-bolt"></i></div>
+            <h3>London's Speed + Precision</h3>
+            <p>Flexible approach to working for busy owners. We move at the pace of your business — working with you,
+              not against you.</p>
+          </div>
+          <div class="usp-card">
+            <div class="usp-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3>Fully UK Compliant</h3>
+            <p>Registered with ACCA & ICAEW, insured, and up to date with HMRC's latest rules. Compliance isn't optional
+              — it's
+              the foundation.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <h2>What Our Clients Say</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <p class="testimonial-text">
-            "Greymatter brought real clarity to our tax planning and audit preperation. The whole process felt calm, structured, and professional."
-          </p>
-          <p class="testimonial-author">
-            <strong>Naomi A.</strong><br>
-            <small>Founder, Finwise Labs (London Bridge)</small>
-          </p>
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>How It Works</h2>
+          <p>Three simple steps to better accounting</p>
         </div>
-        <div class="testimonial-card">
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Initial Consultation</h3>
+              <p>Free, no obligation. We review your current accounting setup and identify opportunities for
+                improvement.</p>
+            </div>
           </div>
-          <p class="testimonial-text">
-            "We switched to Greymatter for a more responsive, practical, and commercially useful accounting relationship."
-          </p>
-          <p class="testimonial-author">
-            <strong>Daniel R.</strong><br>
-            <small>MD, West End Retail Group</small>
-          </p>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+          <div class="step-connector"></div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Tailored Scope & Fee</h3>
+              <p>Fixed monthly or project pricing with No hidden charges. Transparent from day one.</p>
+            </div>
           </div>
-          <p class="testimonial-text">
-            "Hands-on, commercial approach to tax planning. They genuinely care about our business growth, not just compliance boxes."
-          </p>
-          <p class="testimonial-author">
-            <strong>James M.</strong><br>
-            <small>CEO, Tech Startup (King's Cross)</small>
-          </p>
+          <div class="step-connector"></div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Onboarding & Handover</h3>
+              <p>We connect to your data sources or set up your books from scratch, ensuring seamless
+                transition.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact" data-section="contact">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <h2>Let's Talk</h2>
-          <p>Ready to take control of your finances?</p>
-          
-          <div class="contact-details">
-            
-            <div class="detail">
-              <span class="detail-icon"><i class="fas fa-phone"></i></span>
-              <div>
-                <p class="detail-label">Phone</p>
-                <p><a href="tel:+447523889308">+44 7523 889308</a></p>
-              </div>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Our Clients Say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-            <div class="detail">
-              <span class="detail-icon" style="color: #25D366;"><i class="fab fa-whatsapp"></i></span>
-              <div>
-                <p class="detail-label">WhatsApp</p>
-                <p style="margin-bottom: 6px;"><a href="https://wa.me/447523889308" target="_blank">+44 7523 889308</a></p>
-                <a href="https://wa.me/447523889308" target="_blank" class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 13px; border-radius: 8px;">
-                  <i class="fab fa-whatsapp"></i> Message Us
-                </a>
-              </div>
+            <p class="testimonial-text">
+              "Greymatter brought real clarity to our tax planning and audit preperation. The whole process felt calm,
+              structured, and professional."
+            </p>
+            <p class="testimonial-author">
+              <strong>Naomi A.</strong><br>
+              <small>Founder, Finwise Labs (London Bridge)</small>
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-            <div class="detail">
-              <span class="detail-icon"><i class="fas fa-envelope"></i></span>
-              <div>
-                <p class="detail-label">Email</p>
-                <p><a href="mailto:hello@greymatteraccountancy.uk">hello@greymatteraccountancy.uk</a></p>
-              </div>
+            <p class="testimonial-text">
+              "We switched to Greymatter for a more responsive, practical, and commercially useful accounting
+              relationship."
+            </p>
+            <p class="testimonial-author">
+              <strong>Daniel R.</strong><br>
+              <small>MD, West End Retail Group</small>
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-            <div class="detail">
-              <span class="detail-icon" style="color: #0077b5;"><i class="fab fa-linkedin"></i></span>
-              <div>
-                <p class="detail-label">LinkedIn</p>
-                <p><a href="https://www.linkedin.com/company/greymatteraccountancy" target="_blank" rel="noopener noreferrer">greymatteraccountancy</a></p>
-              </div>
-            </div>
-            <div class="detail">
-              <span class="detail-icon"><i class="fas fa-clock"></i></span>
-              <div>
-                <p class="detail-label">Hours</p>
-                <p>Mon–Fri: 9am – 6pm<br><small>Virtual meetings 7am–8pm by request</small></p>
-              </div>
-            </div>
+            <p class="testimonial-text">
+              "Hands-on, commercial approach to tax planning. They genuinely care about our business growth, not just
+              compliance boxes."
+            </p>
+            <p class="testimonial-author">
+              <strong>James M.</strong><br>
+              <small>CEO, Tech Startup (King's Cross)</small>
+            </p>
           </div>
         </div>
-
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <input type="text" placeholder="Your name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Your email" required>
-          </div>
-          <div class="form-group">
-            <select required>
-              <option value="">Select a service</option>
-              <option value="audit">Audit & Assurance</option>
-              <option value="tax">Tax Reporting</option>
-              <option value="bookkeeping">Bookkeeping</option>
-              <option value="accounts">Management Accounts</option>
-              <option value="vat">VAT & MTD</option>
-              <option value="secretarial">Company Secretarial</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <textarea placeholder="Tell us about your business" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-        </form>
       </div>
-    </div>
-  </section>
-  <%- include('partials/footer', { rootPath: '', currentPage: 'home' }) %>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" data-section="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2>Let's Talk</h2>
+            <p>Ready to take control of your finances?</p>
+
+            <div class="contact-details">
+
+              <div class="detail">
+                <span class="detail-icon"><i class="fas fa-phone"></i></span>
+                <div>
+                  <p class="detail-label">Phone</p>
+                  <p><a href="tel:+447523889308">+44 7523 889308</a></p>
+                </div>
+              </div>
+              <div class="detail">
+                <span class="detail-icon" style="color: #25D366;"><i class="fab fa-whatsapp"></i></span>
+                <div>
+                  <p class="detail-label">WhatsApp</p>
+                  <p style="margin-bottom: 6px;"><a href="https://wa.me/447523889308" target="_blank">+44 7523
+                      889308</a></p>
+                  <a href="https://wa.me/447523889308" target="_blank" class="btn btn-whatsapp"
+                    style="padding: 8px 16px; font-size: 13px; border-radius: 8px;">
+                    <i class="fab fa-whatsapp"></i> Message Us
+                  </a>
+                </div>
+              </div>
+              <div class="detail">
+                <span class="detail-icon"><i class="fas fa-envelope"></i></span>
+                <div>
+                  <p class="detail-label">Email</p>
+                  <p><a href="mailto:hello@greymatteraccountancy.uk">hello@greymatteraccountancy.uk</a></p>
+                </div>
+              </div>
+              <div class="detail">
+                <span class="detail-icon" style="color: #0077b5;"><i class="fab fa-linkedin"></i></span>
+                <div>
+                  <p class="detail-label">LinkedIn</p>
+                  <p><a href="https://www.linkedin.com/company/greymatteraccountancy" target="_blank"
+                      rel="noopener noreferrer">greymatteraccountancy</a></p>
+                </div>
+              </div>
+              <div class="detail">
+                <span class="detail-icon"><i class="fas fa-clock"></i></span>
+                <div>
+                  <p class="detail-label">Hours</p>
+                  <p>Mon–Fri: 9am – 6pm<br><small>Virtual meetings 7am–8pm by request</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="">Select a service</option>
+                <option value="audit">Audit & Assurance</option>
+                <option value="tax">Tax Reporting</option>
+                <option value="bookkeeping">Bookkeeping</option>
+                <option value="accounts">Management Accounts</option>
+                <option value="vat">VAT & MTD</option>
+                <option value="secretarial">Company Secretarial</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Tell us about your business" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <%- include('partials/footer', { rootPath: '' , currentPage: 'home' }) %>
 </body>
+
 </html>

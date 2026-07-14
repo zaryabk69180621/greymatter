@@ -26,22 +26,33 @@ if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const formData = new FormData(contactForm);
-    const data = {
-      name: contactForm.querySelector('input[type="text"]').value,
-      email: contactForm.querySelector('input[type="email"]').value,
-      service: contactForm.querySelector('select').value,
-      message: contactForm.querySelector('textarea').value,
-    };
+    const name = contactForm.querySelector('input[type="text"]').value;
+    const email = contactForm.querySelector('input[type="email"]').value;
+    const selectEl = contactForm.querySelector('select');
+    const serviceText = selectEl.options[selectEl.selectedIndex].text;
+    const message = contactForm.querySelector('textarea').value;
 
-    // Here you would typically send this data to a server
-    console.log('Form submitted:', data);
+    const formattedMessage = `Hello Greymatter Accountancy,
+
+I would like to inquire about your services. Here are my details:
+
+Name: ${name}
+Email: ${email}
+Service: ${serviceText}
+Message: ${message}`;
+
+    const whatsappUrl = `https://wa.me/447523889308?text=${encodeURIComponent(formattedMessage)}`;
+    
+    // Open WhatsApp in a new window/tab
+    window.open(whatsappUrl, '_blank');
     
     // Show success message
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     submitBtn.textContent = '✓ Message sent!';
     submitBtn.style.background = 'linear-gradient(135deg, #2d7a7a 0%, #1e4d52 100%)';
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.6';
     
     // Reset form
     contactForm.reset();
@@ -50,6 +61,8 @@ if (contactForm) {
     setTimeout(() => {
       submitBtn.textContent = originalText;
       submitBtn.style.background = '';
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '';
     }, 3000);
   });
 }
@@ -309,13 +322,6 @@ if (canvas && heroSection && window.innerWidth >= 1024) {
   animate();
 }
 
-// Add loading state to form
-if (contactForm) {
-  contactForm.addEventListener('submit', function() {
-    const submitBtn = this.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.6';
-  });
-}
+
 
 console.log('Greymatter website loaded successfully ✓');
